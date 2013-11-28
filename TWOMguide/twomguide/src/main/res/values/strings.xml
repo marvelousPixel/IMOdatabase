@@ -9,5 +9,10 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_example">Example action</string>
     <string name="action_settings">Settings</string>
+    <string name="poison_lizard">Poison Lizard</string>
+    <string name="unknown">unknown</string>
+    <string name="common">common</string>
+    <string name="instant_dung">Instant Dungeon</string>
+    <string name="silent_altair">Silent Altair</string>
 
 </resources>

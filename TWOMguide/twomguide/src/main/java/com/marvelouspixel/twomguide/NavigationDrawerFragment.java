@@ -97,15 +97,15 @@ public class NavigationDrawerFragment extends Fragment {
                 selectItem(position);
             }
         });
-        mDrawerListView.setAdapter(new ArrayAdapter<String>(
-                getActionBar().getThemedContext(),
-                android.R.layout.simple_list_item_1,
-                android.R.id.text1,
-                new String[]{
-                        getString(R.string.title_section1),
-                        getString(R.string.title_section2),
-                        getString(R.string.title_section3),
-                }));
+
+        CustomAdapter customAdapter = new CustomAdapter(getActivity());
+
+        customAdapter.addDrawerHeader(R.string.instant_dung,R.drawable.ic_launcher);
+
+        customAdapter.addDrawerItem(R.string.silent_altair);
+
+        mDrawerListView.setAdapter(customAdapter);
+
         mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
         return mDrawerListView;
     }

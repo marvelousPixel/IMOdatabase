@@ -102,11 +102,14 @@ public class NavigationDrawerFragment extends Fragment {
 
         customAdapter.addDrawerHeader(R.string.instant_dung,R.drawable.ic_launcher);
 
+        customAdapter.addDrawerItem(R.string.forgotten_cave);
         customAdapter.addDrawerItem(R.string.silent_altair);
+        customAdapter.addDrawerItem(R.string.impassable_cave);
+        customAdapter.addDrawerItem(R.string.desert_dungeon);
 
         mDrawerListView.setAdapter(customAdapter);
 
-        mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
+        mDrawerListView.setOnItemClickListener(new OnDrawerClickListener());
         return mDrawerListView;
     }
 
@@ -278,5 +281,14 @@ public class NavigationDrawerFragment extends Fragment {
          * Called when an item in the navigation drawer is selected.
          */
         void onNavigationDrawerItemSelected(int position);
+    }
+
+    private class OnDrawerClickListener implements AdapterView.OnItemClickListener {
+        @Override
+        public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+            mDrawerListView.setItemChecked(position,true);
+            if (position == 1) { Toast.makeText(getActivity(),"1",Toast.LENGTH_SHORT).show();}
+            if (position == 2) { Toast.makeText(getActivity(),"2",Toast.LENGTH_SHORT).show();}
+        }
     }
 }

@@ -14,5 +14,8 @@
     <string name="common">common</string>
     <string name="instant_dung">Instant Dungeon</string>
     <string name="silent_altair">Silent Altair</string>
+    <string name="forgotten_cave">Forgotten Cave</string>
+    <string name="desert_dungeon">Desert Dungeon</string>
+    <string name="impassable_cave">Impassable Cave</string>
 
 </resources>

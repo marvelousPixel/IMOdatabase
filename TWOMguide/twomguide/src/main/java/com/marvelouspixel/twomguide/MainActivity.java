@@ -5,10 +5,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.content.Context;
-import android.os.Build;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -16,9 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends ActionBarActivity
@@ -143,6 +138,7 @@ public class MainActivity extends ActionBarActivity
             CustomAdapter customAdapter = new CustomAdapter(getActivity());
 
             customAdapter.addListItem(R.string.poison_lizard,R.string.unknown,R.string.common,R.drawable.ic_launcher);
+
 
             monsterListView = (ListView) rootView.findViewById(R.id.monster_list_view);
             monsterListView.setAdapter(customAdapter);

@@ -15,9 +15,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends ActionBarActivity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
@@ -144,6 +146,8 @@ public class MainActivity extends ActionBarActivity
 
             monsterListView = (ListView) rootView.findViewById(R.id.monster_list_view);
             monsterListView.setAdapter(customAdapter);
+
+            monsterListView.setOnItemClickListener(new OnListViewClickListener());
             return rootView;
         }
 
@@ -152,6 +156,14 @@ public class MainActivity extends ActionBarActivity
             super.onAttach(activity);
             ((MainActivity) activity).onSectionAttached(
                     getArguments().getInt(ARG_SECTION_NUMBER));
+        }
+
+        private class OnListViewClickListener implements android.widget.AdapterView.OnItemClickListener {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+                monsterListView.setItemChecked(position,true);
+                Toast.makeText(getActivity(),"asd",Toast.LENGTH_LONG).show();
+            }
         }
     }
 

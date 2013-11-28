@@ -129,7 +129,7 @@ public class MainActivity extends ActionBarActivity
         public static PlaceholderFragment newInstance(int sectionNumber) {
             PlaceholderFragment fragment = new PlaceholderFragment();
             Bundle args = new Bundle();
-            args.putInt(ARG_SECTION_NUMBER, sectionNumber);
+           args.putInt(ARG_SECTION_NUMBER, sectionNumber);
             fragment.setArguments(args);
             return fragment;
         }
@@ -141,13 +141,38 @@ public class MainActivity extends ActionBarActivity
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                 Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
-            CustomAdapter customAdapter = new CustomAdapter(getActivity());
 
-            customAdapter.addListItem(R.string.poison_lizard,R.string.unknown,R.string.common,R.drawable.ic_launcher);
+            /**
+             * first instant dungeon : forgotten cave
+             */
+            CustomAdapter forgottenCaveDung = new CustomAdapter(getActivity());
 
+            forgottenCaveDung.addListItem(R.string.poison_lizard, R.string.twenty25, R.string.common, R.drawable.ic_launcher);
+            forgottenCaveDung.addListItem(R.string.big_eyed_soul, R.string.twenty26, R.string.common, R.drawable.ic_launcher);
+            forgottenCaveDung.addListItem(R.string.purple_imp,R.string.twenty28, R.string.common,R.drawable.ic_launcher);
+            forgottenCaveDung.addListItem(R.string.magic_imp,R.string.twenty28,R.string.common,R.drawable.ic_launcher);
+            forgottenCaveDung.addListItem(R.string.evil_spirit,R.string.thrity30,R.string.mini_boss, R.drawable.ic_launcher);
 
             monsterListView = (ListView) rootView.findViewById(R.id.monster_list_view);
-            monsterListView.setAdapter(customAdapter);
+
+            Integer imaginaryInt = Integer.valueOf(Integer.toString(getArguments().getInt(ARG_SECTION_NUMBER)));
+            if (imaginaryInt == 2){
+
+
+            monsterListView.setAdapter(forgottenCaveDung);}
+
+            /**
+             *  second instant dungeon silent altair
+             */
+
+            CustomAdapter silentAltairDung = new CustomAdapter(getActivity());
+
+            silentAltairDung.addListItem(R.string.forgotten_cave,R.string.twenty28,R.string.boss,R.drawable.ic_launcher);
+
+            if (imaginaryInt == 3 ) {
+                monsterListView.setAdapter(silentAltairDung);
+
+            }
 
             monsterListView.setOnItemClickListener(new OnListViewClickListener());
             return rootView;

@@ -17,5 +17,15 @@
     <string name="forgotten_cave">Forgotten Cave</string>
     <string name="desert_dungeon">Desert Dungeon</string>
     <string name="impassable_cave">Impassable Cave</string>
+    <string name="big_eyed_soul">Big Eyed Soul</string>
+    <string name="twenty25">lvl: 25</string>
+    <string name="twenty26">lvl: 26</string>
+    <string name="purple_imp">Purple Imp</string>
+    <string name="twenty28">lvl: 28</string>
+    <string name="magic_imp">Magic Imp</string>
+    <string name="evil_spirit">Evil Spirit</string>
+    <string name="thrity30">lvl: 30</string>
+    <string name="mini_boss">Mini-Boss</string>
+    <string name="boss">Boss</string>
 
 </resources>

@@ -109,7 +109,7 @@ public class NavigationDrawerFragment extends Fragment {
 
         mDrawerListView.setAdapter(customAdapter);
 
-        mDrawerListView.setOnItemClickListener(new OnDrawerClickListener());
+        mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
         return mDrawerListView;
     }
 
@@ -281,14 +281,5 @@ public class NavigationDrawerFragment extends Fragment {
          * Called when an item in the navigation drawer is selected.
          */
         void onNavigationDrawerItemSelected(int position);
-    }
-
-    private class OnDrawerClickListener implements AdapterView.OnItemClickListener {
-        @Override
-        public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-            mDrawerListView.setItemChecked(position,true);
-            if (position == 1) { Toast.makeText(getActivity(),"1",Toast.LENGTH_SHORT).show();}
-            if (position == 2) { Toast.makeText(getActivity(),"2",Toast.LENGTH_SHORT).show();}
-        }
     }
 }

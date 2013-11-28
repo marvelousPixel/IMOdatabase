@@ -27,5 +27,15 @@
     <string name="thrity30">lvl: 30</string>
     <string name="mini_boss">Mini-Boss</string>
     <string name="boss">Boss</string>
+    <string name="twom_guide">TWOMguide</string>
+    <string name="underground_eater">Underground Eater</string>
+    <string name="twenty5">lvl: 25</string>
+    <string name="twenty6">lvl: 26</string>
+    <string name="twenty7">lvl: 27</string>
+    <string name="twenty8">lvl: 28</string>
+    <string name="walking_death">Walking Death</string>
+    <string name="thirty2">lvl: 32</string>
+    <string name="mutanthydra">MUTANTHYDRA</string>
+    <string name="thirty1">lvl: 31</string>
 
 </resources>

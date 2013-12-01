@@ -100,7 +100,8 @@ public class NavigationDrawerFragment extends Fragment {
 
         CustomAdapter customAdapter = new CustomAdapter(getActivity());
 
-        customAdapter.addDrawerHeader(R.string.instant_dung,R.drawable.ic_launcher);
+        customAdapter.addDrawerHeader(R.string.what_is_new,0);
+        customAdapter.addDrawerHeader(R.string.instant_dung,0);
 
         customAdapter.addDrawerItem(R.string.forgotten_cave);
         customAdapter.addDrawerItem(R.string.silent_altair);

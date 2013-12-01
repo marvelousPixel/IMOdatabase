@@ -46,5 +46,10 @@
     <string name="evil_spirit_description">Obviously a blue ghost.</string>
     <string name="walking_death_description">Another mummy.</string>
     <string name="mutanthydra_description">Beware of it\'s poison attacks.</string>
+    <string name="altar_cleaner">Altar Cleaner</string>
+    <string name="what_is_new">What\'s new?</string>
+    <string name="altar_cleaner_description">A broom made of silver.</string>
+    <string name="silhouette">Silhouette</string>
+    <string name="fourty1">lvl: 41</string>
 
 </resources>

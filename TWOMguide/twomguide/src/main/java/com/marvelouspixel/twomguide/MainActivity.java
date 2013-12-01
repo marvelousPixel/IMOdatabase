@@ -1,7 +1,6 @@
 package com.marvelouspixel.twomguide;
 
 import android.app.Activity;
-import android.net.rtp.RtpStream;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
@@ -15,6 +14,7 @@ import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends ActionBarActivity
@@ -147,6 +147,12 @@ public class MainActivity extends ActionBarActivity
              */
             Integer imaginaryInt = Integer.valueOf(Integer.toString(getArguments().getInt(ARG_SECTION_NUMBER)));
 
+            if (imaginaryInt == 1){
+                TextView text = new TextView(getActivity());
+                text.setText("forgotten cave is done");
+
+            }
+
             /**
              * first instant dungeon : forgotten cave
              */
@@ -165,7 +171,7 @@ public class MainActivity extends ActionBarActivity
             monsterListView = (ListView) rootView.findViewById(R.id.monster_list_view);
 
 
-            if (imaginaryInt == 2){
+            if (imaginaryInt == 3){
             monsterListView.setAdapter(forgottenCaveDung);}
 
             /**
@@ -174,11 +180,34 @@ public class MainActivity extends ActionBarActivity
 
             CustomAdapter silentAltairDung = new CustomAdapter(getActivity());
 
-            silentAltairDung.addListItem(R.string.forgotten_cave,R.string.twenty28,R.string.boss,R.string.silent_altair,R.string.abc_action_bar_home_description,R.drawable.ic_launcher);
+            silentAltairDung.addListItem(R.string.altar_cleaner,R.string.unknown,R.string.common,R.string.silent_altair,R.string.altar_cleaner_description,0);
 
-            if (imaginaryInt == 3 ) {
+            if (imaginaryInt == 4 ) {
                 monsterListView.setAdapter(silentAltairDung);
 
+            }
+
+            /**
+             *  third instant dungeon called impassable cave
+             */
+
+            CustomAdapter impassableCaveDung = new CustomAdapter(getActivity());
+
+            if (imaginaryInt == 5) {
+                monsterListView.setAdapter(impassableCaveDung);
+            }
+
+            /**
+             * fourth and last dungeon called desert dungeon
+             */
+
+            CustomAdapter desertDung = new CustomAdapter(getActivity());
+
+            desertDung.addListItem(R.string.silhouette,R.string.fourty1,R.string.common,R.string.desert_dungeon,R.string.unknown,R.id.icon);
+
+
+            if (imaginaryInt == 6) {
+                monsterListView.setAdapter(desertDung);
             }
 
             monsterListView.setOnItemClickListener(new OnListViewClickListener());

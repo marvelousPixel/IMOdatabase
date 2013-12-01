@@ -37,5 +37,14 @@
     <string name="thirty2">lvl: 32</string>
     <string name="mutanthydra">MUTANTHYDRA</string>
     <string name="thirty1">lvl: 31</string>
+    <string name="poison_lizard_description">Poison Lizard is the weakest instant dungeon monster.</string>
+    <string name="big_eyed_soul_description"><![CDATA[It resembles the Beholder from Dungeons & Dragons, though, this one does not levitate.]]></string>
+    <string name="underground_eater_imp_description">Originating from Germanic folkolore, the Imp looks like a mix between a fairy and a demon.</string>
+    <string name="underground_eater_mummy_description">Lazy developers of Com2us gave several monsters the same name. This one is a green-colored mummy.</string>
+    <string name="twenty9">lvl: 29</string>
+    <string name="magic_imp_description">A pink colored Imp. Not to mix up with the Mini-Bosses from the lighthouse.</string>
+    <string name="evil_spirit_description">Obviously a blue ghost.</string>
+    <string name="walking_death_description">Another mummy.</string>
+    <string name="mutanthydra_description">Beware of it\'s poison attacks.</string>
 
 </resources>

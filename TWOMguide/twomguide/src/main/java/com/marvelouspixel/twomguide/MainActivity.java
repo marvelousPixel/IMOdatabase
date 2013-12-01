@@ -1,6 +1,7 @@
 package com.marvelouspixel.twomguide;
 
 import android.app.Activity;
+import android.net.rtp.RtpStream;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
@@ -151,14 +152,14 @@ public class MainActivity extends ActionBarActivity
              */
             CustomAdapter forgottenCaveDung = new CustomAdapter(getActivity());
 
-            forgottenCaveDung.addListItem(R.string.poison_lizard, R.string.twenty5, R.string.common, R.drawable.ghostsnake);
-            forgottenCaveDung.addListItem(R.string.big_eyed_soul, R.string.twenty6, R.string.common, R.drawable.big_eyed_soul);
-            forgottenCaveDung.addListItem(R.string.underground_eater,R.string.twenty7, R.string.common,R.drawable.purple_imp);
-            forgottenCaveDung.addListItem(R.string.underground_eater,R.string.twenty8,R.string.common,R.drawable.ic_launcher);
-            forgottenCaveDung.addListItem(R.string.magic_imp,R.string.twenty28,R.string.common,R.drawable.pink_imp);
-            forgottenCaveDung.addListItem(R.string.evil_spirit,R.string.thrity30,R.string.mini_boss, R.drawable.blue_ghost);
-            forgottenCaveDung.addListItem(R.string.walking_death,R.string.thirty1,R.string.mini_boss,R.drawable.ic_launcher);
-            forgottenCaveDung.addListItem(R.string.mutanthydra,R.string.thirty2,R.string.boss,R.drawable.devilang_red);
+            forgottenCaveDung.addListItem(R.string.poison_lizard, R.string.twenty5, R.string.common,R.string.forgotten_cave,R.string.poison_lizard_description, R.drawable.ghostsnake);
+            forgottenCaveDung.addListItem(R.string.big_eyed_soul, R.string.twenty6, R.string.common,R.string.forgotten_cave,R.string.big_eyed_soul_description, R.drawable.big_eyed_soul);
+            forgottenCaveDung.addListItem(R.string.underground_eater,R.string.twenty7, R.string.common,R.string.forgotten_cave,R.string.underground_eater_imp_description,R.drawable.purple_imp);
+            forgottenCaveDung.addListItem(R.string.underground_eater,R.string.twenty8,R.string.common,R.string.forgotten_cave,R.string.underground_eater_mummy_description,R.drawable.underground_eater);
+            forgottenCaveDung.addListItem(R.string.magic_imp,R.string.twenty9,R.string.common,R.string.forgotten_cave,R.string.magic_imp_description,R.drawable.pink_imp);
+            forgottenCaveDung.addListItem(R.string.evil_spirit,R.string.thrity30,R.string.mini_boss,R.string.forgotten_cave,R.string.evil_spirit_description, R.drawable.blue_ghost);
+            forgottenCaveDung.addListItem(R.string.walking_death,R.string.thirty1,R.string.mini_boss,R.string.forgotten_cave,R.string.walking_death_description,R.drawable.walking_death);
+            forgottenCaveDung.addListItem(R.string.mutanthydra,R.string.thirty2,R.string.boss, R.string.forgotten_cave,R.string.mutanthydra_description,R.drawable.devilang_red);
 
             // ListView which we introduced in our fragment_main.
             monsterListView = (ListView) rootView.findViewById(R.id.monster_list_view);
@@ -173,7 +174,7 @@ public class MainActivity extends ActionBarActivity
 
             CustomAdapter silentAltairDung = new CustomAdapter(getActivity());
 
-            silentAltairDung.addListItem(R.string.forgotten_cave,R.string.twenty28,R.string.boss,R.drawable.ic_launcher);
+            silentAltairDung.addListItem(R.string.forgotten_cave,R.string.twenty28,R.string.boss,R.string.silent_altair,R.string.abc_action_bar_home_description,R.drawable.ic_launcher);
 
             if (imaginaryInt == 3 ) {
                 monsterListView.setAdapter(silentAltairDung);

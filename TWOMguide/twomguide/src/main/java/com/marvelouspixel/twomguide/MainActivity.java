@@ -181,6 +181,9 @@ public class MainActivity extends ActionBarActivity
             CustomAdapter silentAltairDung = new CustomAdapter(getActivity());
 
             silentAltairDung.addListItem(R.string.altar_cleaner,R.string.unknown,R.string.common,R.string.silent_altair,R.string.altar_cleaner_description,0);
+            silentAltairDung.addListItem(R.string.silent_ghost,R.string.unknown,R.string.common,R.string.silent_altair,R.string.silent_ghost_description,0);
+            silentAltairDung.addListItem(R.string.rock_golem,R.string.unknown,R.string.common,R.string.silent_altair,R.string.rock_golem_description,0);
+            silentAltairDung.addDrawerItem(R.string.fluid_form,R.string.unknown,R.string.common,R.string.silent_altair,R.string.fluid_form_description);
 
             if (imaginaryInt == 4 ) {
                 monsterListView.setAdapter(silentAltairDung);

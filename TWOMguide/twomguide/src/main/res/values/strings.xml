@@ -51,5 +51,11 @@
     <string name="altar_cleaner_description">A broom made of silver.</string>
     <string name="silhouette">Silhouette</string>
     <string name="fourty1">lvl: 41</string>
+    <string name="silent_ghost">Silent Ghost</string>
+    <string name="silent_ghost_description">\"Boo\".</string>
+    <string name="rock_golem">Rock Golem</string>
+    <string name="rock_golem_description">A monster made out og hard rock.</string>
+    <string name="fluid_form">Fluid Form</string>
+    <string name="fluid_form_description" />
 
 </resources>

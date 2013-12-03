@@ -182,8 +182,11 @@ public class MainActivity extends ActionBarActivity
 
             silentAltairDung.addListItem(R.string.altar_cleaner,R.string.unknown,R.string.common,R.string.silent_altair,R.string.altar_cleaner_description,0);
             silentAltairDung.addListItem(R.string.silent_ghost,R.string.unknown,R.string.common,R.string.silent_altair,R.string.silent_ghost_description,0);
-            silentAltairDung.addListItem(R.string.rock_golem,R.string.unknown,R.string.common,R.string.silent_altair,R.string.rock_golem_description,0);
-            silentAltairDung.addDrawerItem(R.string.fluid_form,R.string.unknown,R.string.common,R.string.silent_altair,R.string.fluid_form_description);
+            silentAltairDung.addListItem(R.string.rock_golem,R.string.unknown,R.string.common,R.string.silent_altair,R.string.rock_golem_description,R.drawable.brown_mystery);
+            silentAltairDung.addListItem(R.string.fluid_form, R.string.unknown, R.string.common, R.string.silent_altair, R.string.fluid_form_description, 0);
+            silentAltairDung.addListItem(R.string.mystery,R.string.unknown,R.string.mini_boss,R.string.silent_altair,R.string.mystery_description,R.drawable.mystery);
+            silentAltairDung.addListItem(R.string.morphling,R.string.unknown,R.string.mini_boss,R.string.silent_altair,R.string.morphling_description,0);
+            silentAltairDung.addListItem(R.string.malterguardian,R.string.unknown,R.string.boss,R.string.silent_altair,R.string.malterguardian_description,R.drawable.turtle);
 
             if (imaginaryInt == 4 ) {
                 monsterListView.setAdapter(silentAltairDung);
@@ -196,6 +199,16 @@ public class MainActivity extends ActionBarActivity
 
             CustomAdapter impassableCaveDung = new CustomAdapter(getActivity());
 
+            impassableCaveDung.addListItem(R.string.cave_spider,R.string.thirty4,R.string.common,R.string.impassable_cave,R.string.cave_spider_description,R.drawable.cave_spider);
+            impassableCaveDung.addListItem(R.string.wandering_spider,R.string.thirty5,R.string.common,R.string.impassable_cave,R.string.wandering_spider_description,R.drawable.wandering_spider);
+            impassableCaveDung.addListItem(R.string.light_wing,R.string.thirty6,R.string.common,R.string.impassable_cave,R.string.light_wing_description,0);
+            impassableCaveDung.addListItem(R.string.hairy,R.string.thirty7,R.string.common,R.string.impassable_cave,R.string.hairy_description,R.drawable.brown_yeti);
+            impassableCaveDung.addListItem(R.string.cave_keeper,R.string.thirty8,R.string.common,R.string.impassable_cave,R.string.cave_keeper_description,0);
+            impassableCaveDung.addListItem(R.string.darkjuno,R.string.thirty8,R.string.mini_boss,R.string.impassable_cave,R.string.darkjuno_description,R.drawable.juno);
+            impassableCaveDung.addListItem(R.string.graysky,R.string.thirty9,R.string.mini_boss,R.string.impassable_cave,R.string.graysky_description,R.drawable.sky);
+            impassableCaveDung.addListItem(R.string.whitewadangka,R.string.fourty,R.string.boss,R.string.impassable_cave,R.string.whitewadangka_description,R.drawable.wadangka);
+
+
             if (imaginaryInt == 5) {
                 monsterListView.setAdapter(impassableCaveDung);
             }
@@ -206,7 +219,12 @@ public class MainActivity extends ActionBarActivity
 
             CustomAdapter desertDung = new CustomAdapter(getActivity());
 
-            desertDung.addListItem(R.string.silhouette,R.string.fourty1,R.string.common,R.string.desert_dungeon,R.string.unknown,R.id.icon);
+            desertDung.addListItem(R.string.silhouette,R.string.fourty1,R.string.common,R.string.desert_dungeon,R.string.silhouette_description,R.drawable.silhouette);
+            desertDung.addListItem(R.string.bandagaman,R.string.fourty2,R.string.common,R.string.desert_dungeon,R.string.bandagaman_description,R.drawable.bandageman);
+            desertDung.addListItem(R.string.underground_eater,R.string.fourty3,R.string.common,R.string.desert_dungeon,R.string.underground_eater_sandeater_description,R.drawable.sandeater);
+            desertDung.addListItem(R.string.reason_scream,R.string.fourty4,R.string.mini_boss,R.string.desert_dungeon,R.string.reason_scream_description,R.drawable.reason_scream);
+            desertDung.addListItem(R.string.gluttony,R.string.fourty5,R.string.mini_boss,R.string.desert_dungeon,R.string.gluttony_description,R.drawable.gluttony);
+            desertDung.addListItem(R.string.themama,R.string.fourty6,R.string.boss,R.string.desert_dungeon,R.string.themama_description,R.drawable.medusa);
 
 
             if (imaginaryInt == 6) {

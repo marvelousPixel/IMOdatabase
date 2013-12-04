@@ -1,6 +1,7 @@
 package com.marvelouspixel.twomguide;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
@@ -16,6 +17,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
 
 public class MainActivity extends ActionBarActivity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
@@ -36,10 +38,19 @@ public class MainActivity extends ActionBarActivity
      */
     private static ListView monsterListView;
 
+    /**
+     *
+     *  number of site
+     */
+
+    private static int imaginaryInt;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
 
         mNavigationDrawerFragment = (NavigationDrawerFragment)
                 getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
@@ -60,6 +71,12 @@ public class MainActivity extends ActionBarActivity
                 .commit();
     }
 
+    @Override
+    public void onBackPressed() {
+
+        super.onBackPressed();
+    }
+
     public void onSectionAttached(int number) {
         switch (number) {
             case 1:
@@ -69,7 +86,7 @@ public class MainActivity extends ActionBarActivity
                 mTitle = getString(R.string.forgotten_cave);
                 break;
             case 3:
-                mTitle = getString(R.string.silent_altair);
+                mTitle = getString(R.string.silent_altar);
                 break;
             case 4:
                 mTitle = getString(R.string.impassable_cave);
@@ -145,9 +162,10 @@ public class MainActivity extends ActionBarActivity
             /**
              * each fragment returns a different number chronologically.
              */
-            Integer imaginaryInt = Integer.valueOf(Integer.toString(getArguments().getInt(ARG_SECTION_NUMBER)));
+            imaginaryInt = Integer.valueOf(Integer.toString(getArguments().getInt(ARG_SECTION_NUMBER)));
 
             if (imaginaryInt == 1){
+
                 TextView text = new TextView(getActivity());
                 text.setText("forgotten cave is done");
 
@@ -157,6 +175,7 @@ public class MainActivity extends ActionBarActivity
              * first instant dungeon : forgotten cave
              */
             CustomAdapter forgottenCaveDung = new CustomAdapter(getActivity());
+
 
             forgottenCaveDung.addListItem(R.string.poison_lizard, R.string.twenty5, R.string.common,R.string.forgotten_cave,R.string.poison_lizard_description, R.drawable.ghostsnake);
             forgottenCaveDung.addListItem(R.string.big_eyed_soul, R.string.twenty6, R.string.common,R.string.forgotten_cave,R.string.big_eyed_soul_description, R.drawable.big_eyed_soul);
@@ -172,6 +191,7 @@ public class MainActivity extends ActionBarActivity
 
 
             if (imaginaryInt == 3){
+
             monsterListView.setAdapter(forgottenCaveDung);}
 
             /**
@@ -180,15 +200,16 @@ public class MainActivity extends ActionBarActivity
 
             CustomAdapter silentAltairDung = new CustomAdapter(getActivity());
 
-            silentAltairDung.addListItem(R.string.altar_cleaner,R.string.unknown,R.string.common,R.string.silent_altair,R.string.altar_cleaner_description,0);
-            silentAltairDung.addListItem(R.string.silent_ghost,R.string.unknown,R.string.common,R.string.silent_altair,R.string.silent_ghost_description,0);
-            silentAltairDung.addListItem(R.string.rock_golem,R.string.unknown,R.string.common,R.string.silent_altair,R.string.rock_golem_description,R.drawable.brown_mystery);
-            silentAltairDung.addListItem(R.string.fluid_form, R.string.unknown, R.string.common, R.string.silent_altair, R.string.fluid_form_description, 0);
-            silentAltairDung.addListItem(R.string.mystery,R.string.unknown,R.string.mini_boss,R.string.silent_altair,R.string.mystery_description,R.drawable.mystery);
-            silentAltairDung.addListItem(R.string.morphling,R.string.unknown,R.string.mini_boss,R.string.silent_altair,R.string.morphling_description,0);
-            silentAltairDung.addListItem(R.string.malterguardian,R.string.unknown,R.string.boss,R.string.silent_altair,R.string.malterguardian_description,R.drawable.turtle);
+            silentAltairDung.addListItem(R.string.altar_cleaner,R.string.unknown,R.string.common,R.string.silent_altar,R.string.altar_cleaner_description,0);
+            silentAltairDung.addListItem(R.string.silent_ghost,R.string.unknown,R.string.common,R.string.silent_altar,R.string.silent_ghost_description,0);
+            silentAltairDung.addListItem(R.string.rock_golem,R.string.unknown,R.string.common,R.string.silent_altar,R.string.rock_golem_description,R.drawable.brown_mystery);
+            silentAltairDung.addListItem(R.string.fluid_form, R.string.unknown, R.string.common, R.string.silent_altar, R.string.fluid_form_description, 0);
+            silentAltairDung.addListItem(R.string.mystery,R.string.unknown,R.string.mini_boss,R.string.silent_altar,R.string.mystery_description,R.drawable.mystery);
+            silentAltairDung.addListItem(R.string.morphling,R.string.unknown,R.string.mini_boss,R.string.silent_altar,R.string.morphling_description,0);
+            silentAltairDung.addListItem(R.string.malterguardian,R.string.unknown,R.string.boss,R.string.silent_altar,R.string.malterguardian_description,R.drawable.turtle);
 
             if (imaginaryInt == 4 ) {
+
                 monsterListView.setAdapter(silentAltairDung);
 
             }
@@ -210,6 +231,7 @@ public class MainActivity extends ActionBarActivity
 
 
             if (imaginaryInt == 5) {
+
                 monsterListView.setAdapter(impassableCaveDung);
             }
 
@@ -228,6 +250,7 @@ public class MainActivity extends ActionBarActivity
 
 
             if (imaginaryInt == 6) {
+
                 monsterListView.setAdapter(desertDung);
             }
 
@@ -246,9 +269,25 @@ public class MainActivity extends ActionBarActivity
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
                 monsterListView.setItemChecked(position,true);
-                Toast.makeText(getActivity(),"asd",Toast.LENGTH_LONG).show();
+
+
+                if (position == 0 && imaginaryInt == 3  ) {
+                    ListResult listResult = new ListResult();
+                    listResult.setLayoutID(R.layout.drawer_item);
+                    Intent intent = new Intent(view.getContext(),listResult.getClass());
+
+                    startActivityForResult(intent, 0);
+
+                }
+                if (position == 1 && imaginaryInt == 3  )
+                    Toast.makeText(getActivity(),"2",Toast.LENGTH_SHORT).show();
+
             }
+
+
         }
+
+
     }
 
 }

@@ -45,6 +45,9 @@ public class MainActivity extends ActionBarActivity
 
     private static int imaginaryInt;
 
+    public static int uniqueID;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -272,16 +275,17 @@ public class MainActivity extends ActionBarActivity
 
 
                 if (position == 0 && imaginaryInt == 3  ) {
-                    ListResult listResult = new ListResult();
-                    listResult.setLayoutID(R.layout.drawer_item);
-                    Intent intent = new Intent(view.getContext(),listResult.getClass());
-
+                    uniqueID = 1;
+                    Intent intent = new Intent(view.getContext(),ListResult.class);
                     startActivityForResult(intent, 0);
 
-                }
-                if (position == 1 && imaginaryInt == 3  )
-                    Toast.makeText(getActivity(),"2",Toast.LENGTH_SHORT).show();
 
+                }
+                if (position == 1 && imaginaryInt == 3  ) {
+                    uniqueID = 2;
+                    Intent intent2 = new Intent(view.getContext(),ListResult.class);
+                    startActivityForResult(intent2,0);
+                }
             }
 
 

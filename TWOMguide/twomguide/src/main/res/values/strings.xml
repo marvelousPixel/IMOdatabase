@@ -104,5 +104,9 @@
     <string name="gluttony_description">It\'s always hungry.</string>
     <string name="themama_description">do not run away from it</string>
     <string name="silent_altar">Silent Altar</string>
+    <string name="data">Data</string>
+    <string name="type">Type:</string>
+    <string name="level_doublepoint">Level:</string>
+
 
 </resources>

@@ -275,8 +275,9 @@ public class MainActivity extends ActionBarActivity
 
 
                 if (position == 0 && imaginaryInt == 3  ) {
-                    uniqueID = 1;
+
                     Intent intent = new Intent(view.getContext(),ListResult.class);
+                    intent.putExtra("layout_id",R.layout.dung_poison_lizard);
                     startActivityForResult(intent, 0);
 
 

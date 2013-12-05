@@ -107,6 +107,17 @@
     <string name="data">Data</string>
     <string name="type">Type:</string>
     <string name="level_doublepoint">Level:</string>
+    <string name="content_desc">content_desc</string>
+    <string name="detail_area">Area:</string>
+    <string name="detail_style">Style:</string>
+    <string name="detail_respawn">Respawn:</string>
+    <string name="detail_special_note">Special Note:</string>
+    <string name="twenty_five">25</string>
+    <string name="summoned">summoned</string>
+    <string name="close_ranged">close ranged</string>
+    <string name="na">N/A</string>
+    <string name="none">none</string>
+    <string name="droplist">Droplist</string>
 
 
 </resources>
